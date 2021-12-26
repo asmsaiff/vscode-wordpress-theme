@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dive Into Web World - convert your idea to code with next technology</title>
+
+    <!-- Font Awesome Kits -->
+    <script src="https://kit.fontawesome.com/6305d37200.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Parisienne&family=Philosopher:ital@0;1&display=swap" rel="stylesheet"> 
+
+    <!-- Slick Style -->
+    <!-- <link rel="stylesheet" href="assets/css/slick.css"> -->
+
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="drawer drawer--right">
+    <!-- Site Header -->
+    <header class="border-t-4 border-blue-600 sticky top-0 z-50">
+        <div class="shadow-lg z-20 bg-white">
+            <div class="px-2 md:px-4 container mx-auto lg:px-0 py-2 border-b border-gray-300">
+                <div class="flex flex-col md:flex-row justify-between text-sm">
+                    <div class="flex justify-between md:justify-start text-center md:text-left">
+                        <div class="text-left">
+                            <i class="far fa-moon"></i>
+                            <span>18<sup>•C</sup></span>
+                            <span class="block md:inline">New York</span>
+                        </div>
+                        <div class="ml-2 md:border-l border-gray-300 pl-2">
+                            <h4 class="w-20 md:w-auto text-right">Monday, July 5, 2021</h4>
+                        </div>
+                    </div>
+                    <div class="flex justify-center md:justify-start mt-3 md:mt-0 space-x-4">
+                        <div class="hidden md:block">
+                            <ul class="flex space-x-2 border-r pr-4">
+                                <li><a href="#!" class="hover:underline">Login</a></li>
+                                <li><a href="#!" class="hover:underline">Forum</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="hidden md:block">
+                            <ul class="flex space-x-2 border-r pr-4">
+                                <li><a href="#!" class="hover:underline">Terms & Conditions</a></li>
+                                <li><a href="#!" class="hover:underline">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <ul class="flex space-x-3 -mt-10 md:-mt-0">
+                            <li><a href="#!"><i class="fab fab fa-facebook-f"></i></a></li>
+                            <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#!"><i class="fab far fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="py-4 sticky top-0">
+                <div class="px-2 md:px-4 lg:px-0 container mx-auto flex justify-between">
+                    <h1 class="brand font-thin text-xl">Dive Into Web World</h1>
+
+                    <div class="flex" x-data="{ mobileMenuOpen : false }">
+                        <!-- <nav class="self-center">
+                            <ul class="flex space-x-4 mr-4 font-thin">
+                                <li><a href="#!">Home</a></li>
+                                <li><a href="#!">Editorial</a></li>
+                                <li><a href="#!">Featured</a></li>
+                                <li><a href="#!">Technology</a></li>
+                                <li><a href="#!">Latest</a></li>
+                            </ul>
+                        </nav> -->
+
+                        <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block md:hidden w-8 h-8 bg-gray-200 text-gray-600 p-1">
+                            <svg fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        
+                        <nav class="absolute md:relative top-16 left-0 md:top-0 z-20 md:flex flex-col md:flex-row md:space-x-6 font-thin w-full md:w-auto bg-white shadow-md md:rounded-none md:shadow-none md:bg-transparent pt-0 md:p-0 mr-4 px-2 md:px-0" :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}"  @click.away="mobileMenuOpen = false">
+                            <a href="#!" class="block py-1">Home</a>
+                            <a href="#!" class="block py-1">Editorial</a>
+                            <a href="#!" class="block py-1">Featured</a>
+                            <a href="#!" class="block py-1">Technology</a>
+                            <a href="#!" class="block py-1">Latest</a>
+                        </nav>
+
+                        <div class="flex border-l border-gray-300 pl-4">
+                            <button><i class="far fa-user-circle self-center"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Body -->
+    <main>
+        
+        <div class="bg-gray-50">
+            <div class="container md:mx-auto px-2 md:px-4 lg:px-0 py-8 md:py-16 lg:py-20">
+                <h1 class="text-2xl md:text-4xl font-thin">Lorem ipsum dolor sit amet consectetur.</h1>
+
+                <div class="flex mt-3 divide-x divide-gray-300">
+                    <span class="flex pr-2 text-sm">
+                        <i class="invisible sm:visible -ml-4 sm:-ml-0 far fa-user-circle self-center mr-1"></i>
+                        <h6>Saifullah</h6>
+                    </span>
+                    <span class="px-2 text-sm">
+                        <i class="invisible sm:visible -ml-4 sm:-ml-0 far fa-calendar-alt mr-1"></i>
+                        <a href="">7th July, 2021</a>
+                    </span>
+                    <span class="px-2 text-sm">
+                        <i class="invisible sm:visible -ml-4 sm:-ml-0 fas fa-link self-center mr-1"></i>
+                        <a href="">Uncategorized</a>
+                    </span>
+                    <span class="px-2 text-sm">
+                        <i class="invisible sm:visible -ml-4 sm:-ml-0 fab fa-cloudscale mr-1"></i>
+                        <a href="">20 Views</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-4 lg:px-0 container mx-auto grid sm:grid-cols-9 pb-12 mt-4 md:mt-12 gap-6 xl:gap-12">
+            <div class="col-span-1">
+                <div class="flex md:float-right top-36 sm:sticky">
+                    <i class="fas fa-share self-center pr-6 text-gray-400"></i>
+                    <div class="flex flex-row sm:flex-col sm:space-y-4 space-x-2 sm:space-x-0">
+                        <a href="" class="w-8 h-8 bg-gray-100 hover:bg-blue-600 text-center leading-relaxed text-gray-400 hover:text-white rounded-full p-1 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="" class="w-8 h-8 bg-gray-100 hover:bg-blue-400 text-center leading-relaxed text-gray-400 hover:text-white rounded-full p-1 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        
+                        <a href="" class="w-8 h-8 bg-gray-100 hover:bg-gray-600 text-center leading-relaxed text-gray-400 hover:text-white rounded-full p-1 transition duration-300">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row-start-1 sm:row-auto col-span-7 xl:col-span-5">
+                <img src="https://www.themeum.com/wp-content/uploads/2021/06/Qubely-Update.jpg" alt="" class="mb-10 rounded">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et sem euismod nunc pulvinar bibendum. Duis justo mi, rutrum et leo vitae, bibendum consequat magna. Nunc tempus at erat vitae dictum. Vestibulum tempus feugiat dolor vel tristique. Fusce volutpat augue in pretium consectetur. Nulla a dapibus diam. Vestibulum id posuere mi, quis commodo dolor. Nullam ac tincidunt ligula. Nullam at augue in lectus fringilla commodo. Praesent rutrum tristique sem. Nulla lorem lacus, interdum eget velit at, porta bibendum lorem. Vivamus sed turpis non libero lobortis tempus. Aliquam facilisis eros eu lobortis iaculis. Aenean pretium volutpat dui, vitae auctor urna porta id.<br><br>Ut a imperdiet justo. Nam at mauris lorem. Vestibulum feugiat iaculis leo, ut accumsan leo posuere et. Nullam mauris tellus, molestie vulputate mollis eu, suscipit nec enim. Pellentesque vel tincidunt augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse eget ante purus. Vivamus bibendum tellus neque, a hendrerit odio auctor non. Nam porttitor urna ut varius elementum. Phasellus eget sem suscipit, pharetra turpis id, auctor turpis. Donec quis odio rhoncus, blandit nisl nec, varius ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean enim arcu, varius at hendrerit ac, euismod in sem. Ut semper rhoncus quam a bibendum. Nulla a tellus eget nisl vulputate auctor. Nam ut hendrerit nunc, in sodales lorem.<br><br>Ut tristique purus sit amet augue suscipit, vitae semper nulla blandit. Mauris at ipsum vel tellus eleifend consectetur. Phasellus laoreet blandit hendrerit. Fusce varius lectus urna, ac commodo elit imperdiet id. Fusce sed mauris eget lectus ultricies imperdiet et gravida urna. Nunc mattis sodales dolor, vitae aliquam eros. Duis laoreet, nulla vel ultrices tincidunt, diam lectus lacinia dolor, id malesuada ex odio vel ipsum. Suspendisse ornare tortor at nisl hendrerit scelerisque.<br><br>Donec euismod ante quis ligula pellentesque accumsan in ut elit. Nunc in justo vel ipsum blandit dictum vel ut felis. Nulla ipsum sapien, placerat ac varius in, efficitur eu eros. Nunc congue nibh sit amet ligula venenatis pellentesque. Integer at nisl interdum, euismod mauris nec, efficitur sapien. Etiam non mollis arcu. Fusce ipsum massa, suscipit vel elit interdum, ullamcorper consectetur quam. Suspendisse vehicula tempor ex, feugiat convallis nibh mattis ut. 
+                </p>
+            </div>
+
+            <div class="col-span-7 sm:col-span-5 xl:col-span-3">
+                <div class="top-36 sticky">
+                    <h1 class="brand after-hr relative text-xl">Meet the Author</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100">
+        <div class="container mx-auto px-4 sm:px-0">
+            <div class="py-12 md:py-24">
+                <div class="grid grid-cols-1 xl:grid-cols-6 gap-8 sm:gap-16">
+                    <div class="col-span-2">
+                        <h1 class="footer-brand text-2xl">
+                            Dive Into Web World
+                        </h1>
+                        <hr class="w-16 my-3 border-gray-300">
+
+                        <p class="text-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, corrupti fuga obcaecati fugit impedit optio, modi similique tempore perspiciatis earum deleniti
+                        </p>
+
+                        <ul class="flex space-x-3 my-4">
+                            <li><a href="#!"><i class="fab fab fa-facebook-f"></i></a></li>
+                            <li><a href="#!"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#!"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#!"><i class="fab far fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="text-gray-900 text-lg">For Candidates</h5>
+                        <hr class="w-16 my-3 border-gray-300">
+                        <ul class="mt-3 space-y-1 text-gray-700">
+                            <li><a href="#">Browse Jobs</a></li>
+                            <li><a href="#">Add Resume</a></li>
+                            <li><a href="#">Job Alerts</a></li>
+                            <li><a href="#">My Bookmarks</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h5 class="text-gray-900 text-lg">Useful Links</h5>
+                        <hr class="w-16 my-3 border-gray-300">
+                        <ul class="mt-3 space-y-1 text-gray-700">
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">My Account</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-span-2 md:col-span-2">
+                        <h5 class="text-gray-900 text-lg"><i class="far mr-2 fa-envelope"></i>Sign Up For a Newsletter</h5>
+                        <hr class="w-16 my-3 border-gray-300">
+                        <p class="pb-3 text-gray-700">
+                            Weekly breaking news, analysis and cutting edge<br>advices on job searching.
+                        </p>
+
+                        <form action="">
+                            <div class="flex flex-row">
+                                <input class="w-full outline-none py-3 pl-3 rounded bg-white text-gray-800 focus:shadow-2xl transition duration-300" type="email" placeholder="Enter your email address">
+                                <button class="bg-blue-700 shadow-2xl hover:bg-blue-800 ml-1 rounded px-5 text-white transition" type="submit"><i class="fas fa-arrow-right"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="px-12 py-6 sticky top-0 z-50 border-t border-gray-300">
+            <div class="container mx-auto text-center text-gray-700">
+                <p>
+                    Copyright © <a href="#" class="font-semibold text-gray-900 hover:underline footer-brand">Dive Into Web World</a> | Designed & Developed by - Saifullah Saif
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <!-- <script src="assets/js/slides.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</body>
+</html>

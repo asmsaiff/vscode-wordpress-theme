@@ -1,0 +1,24 @@
+{
+  "name": "diveintowebworld",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwind build assets/css/tw.css -o assets/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saidmsaif/dive-into-web-world-blog-template-tailwindcss.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saidmsaif/dive-into-web-world-blog-template-tailwindcss/issues"
+  },
+  "homepage": "https://github.com/saidmsaif/dive-into-web-world-blog-template-tailwindcss#readme",
+  "dependencies": {
+    "tailwindcss": "^2.2.4"
+  }
+}
