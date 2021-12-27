@@ -35,7 +35,7 @@
                             while($category_post->have_posts()) :
                                 $category_post->the_post();
                         ?>
-                        <a href="#!" class="text-decoration-none align-items-start">
+                        <a href="<?php the_permalink(); ?>" class="text-decoration-none align-items-start">
                             <i class="ri-article-line"></i>
                             <span><?php the_title(); ?></span>
                         </a>
