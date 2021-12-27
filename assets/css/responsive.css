@@ -1,0 +1,132 @@
+@media only screen and (max-width: 576px) {
+    .header-sidepanel {
+        position: absolute;
+        transform: translateX(-400px);
+        transition: .4s;
+        z-index: 1;
+    }
+    .toggle_panel {
+        position: fixed;
+        transform: translateX(0);
+        z-index: 1;
+    }
+    .content-area {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    main {
+        padding: 0;
+    }
+    .single-post-title {
+        font-size: 24px;
+    }
+    .post-card p {
+        display: none;
+    }
+    .post-card .post-title {
+        font-size: 14px;
+    }
+    .post-card .post-content {
+        padding: 7px;
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .header-sidepanel {
+        position: absolute;
+        transform: translateX(-400px);
+        transition: .4s;
+        z-index: 1;
+    }
+    .toggle_panel {
+        position: fixed;
+        transform: translateX(0);
+        z-index: 1;
+    }
+    .content-area {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    main {
+        padding: 0;
+    }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+    .header-sidepanel {
+        position: absolute;
+        transform: translateX(-400px);
+        transition: .4s;
+        z-index: 1;
+    }
+    .toggle_panel {
+        position: fixed;
+        transform: translateX(0);
+        z-index: 1;
+    }
+    .content-area {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    main {
+        padding: 0;
+    }
+    .hero-title {
+        font-size: 25px;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .header-sidepanel {
+        position: absolute;
+        transform: translateX(-400px);
+        transition: .4s;
+        z-index: 1;
+    }
+    .toggle_panel {
+        position: fixed;
+        transform: translateX(0);
+        z-index: 1;
+    }
+    .category-sidebar {
+        width: 350px;
+    }
+    .content-area {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    main {
+        padding: 0;
+    }
+    .hero-title {
+        font-size: 25px;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .category-sidebar {
+        width: 350px;
+    }
+    .main-content-wrapper {
+        padding-left: 350px;
+    }
+    .content-area {
+        max-width: 700px;
+    }
+    main {
+        padding: 0 0 0 80px;
+    }
+}
+@media only screen and (min-width: 1400px) {
+    .category-sidebar {
+        width: 350px;
+    }
+    .main-content-wrapper {
+        padding-left: 350px;
+    }
+    .content-area {
+        max-width: 1000px;
+    }
+    main {
+        padding: 0 0 0 80px;
+    }
+    .articles > div:last-child {
+        display: block;
+    }
+}
