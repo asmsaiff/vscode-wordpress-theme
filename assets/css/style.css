@@ -1,0 +1,272 @@
+/**
+ *  Typography
+**/
+:root {
+    --light: #989eb3;
+    --primary: #a9dc76;
+    --bg-primary: #171c2a;
+    --bg-secondary: #222222;
+    --dark-opacity: rgba(0,0,0,0.2);
+    --toolbar-bg: rgb(17, 20, 31);
+    --cat-bg: #0e0e12;
+    --cat-bg-hover: #2a2a2a;
+    --side-panel-bg: rgb(17, 20, 31);
+    --sidebar-panel-bg-hover: #303030;
+    --text-light: #989eb3;
+    --text-semi-light: #aaa;
+    --border-color: #989eb3;
+}
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.brand, .section-title {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.w-max {
+    width: max-content;
+}
+.h-max {
+    height: fit-content;
+}
+.text-sm {
+    font-size: 16px;
+    line-height: 32px;
+}
+.text-xsm {
+    font-size: 14px;
+    line-height: 32px;
+}
+.h-35 {
+    height: 35px;
+}
+.border-primary {
+    border-color: var(--border-color);
+}
+
+/**
+ *  Override BS5 Class
+**/
+.bg-primary {
+    background: var(--bg-primary) !important;
+}
+.accordion-button {
+    background-color: var(--cat-bg);
+}
+.accordion-button:focus {
+    border: none;
+    box-shadow: none;
+}
+.accordion-button:hover, 
+.accordion-button:not(.collapsed):hover {
+    background-color: var(--cat-bg-hover);
+}
+.accordion-button:not(.collapsed) {
+    background-color: var(--cat-bg);
+    box-shadow: none;
+}
+.accordion-button::after {
+    display: none;
+}
+.accordion-item, .accordion-item:focus, .accordion-item:active,
+.accordion-header, .accordion-header:focus, .accordion-header:active,
+.accordion-button, .accordion-button:focus, .accordion-button:active {
+  outline: none !important;
+}
+.text-primary {
+    color: var(--primary) !important;
+}
+.text-light {
+    color: var(--light) !important;
+}
+.border-primary {
+    border-color: var(--border-color) !important;
+}
+
+/**
+ *  Custom Scrollbar
+**/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--text-semi-light); 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--border-color); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/**
+ *  Header Section
+**/
+.main-header {
+    width: 45px;
+    height: 100vh;
+    z-index: 1;
+}
+.header-top-menu a {
+    transition: .3s;
+}
+.header-top-menu a:hover {
+    background-color: var(--dark-opacity);
+}
+.category-sidebar {
+    width: 268px;
+    padding-left: 45px;
+    height: 100vh;
+}
+.accordion-button .rotate_toggle_icons {
+    transform: rotate(-90deg);
+    transition: .3s;
+}
+.topbar {
+    background-color: var(--toolbar-bg);
+}
+.sidebar-category-menu .accordion-button {
+    font-size: .8rem;
+    font-weight: 400;
+    padding: .5rem 1rem;
+}
+.sidebar-category-menu .accordion-item {
+    background-color: #fff;
+    border-bottom: none;
+    margin-bottom: 1px;
+}
+.category-header-sidebar {
+    height: 96.4vh;
+    background-color: var(--side-panel-bg);
+}
+.category-header-sidebar .accordion-button:focus svg path, 
+.category-header-sidebar .accordion-button svg path {
+    stroke: var(--text-light);
+}
+
+.sub-panel a {
+    align-items: center;
+    border-left: 3px solid transparent;
+    color: var(--text-semi-light);
+    display: grid;
+    font-size: .85rem;
+    grid-template-columns: 2rem auto;
+    line-height: 1.2;
+    padding: 0.4rem 1rem;
+    transition: .2s;
+}
+.sub-panel {
+    background-color: var(--side-panel-bg);
+}
+.sub-panel a:hover {
+    background: var(--sidebar-panel-bg-hover);
+    color: var(--text-light) !important;
+    border-color: var(--border-color);
+}
+.sub-panel a i {
+    color: var(--primary);
+}
+.topbar-line-icon {
+    background: transparent;
+    outline: none;
+}
+.topbar-line-icon:hover {
+    background: var(--dark-opacity);
+    height: 100%;
+}
+.topbar-title-tab {
+    width: 220px;
+    background-color: var(--bg-primary);
+    text-overflow: ellipsis;
+}
+
+/**
+ *  Hero Section
+**/
+.hero {
+    background: var(--dark-opacity) url('../img/bg13.png') no-repeat center center;
+    background-size: cover;
+}
+.hero-title {
+    color: rgb(238, 238, 238);
+}
+
+
+/**
+ *  Main Content Area
+**/
+.content-area {
+    max-width: 900px;
+}
+.content-area img {
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.5));
+}
+.content-area p {
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: .04rem;
+    font-size: 17px;
+    font-weight: 200;
+    color: #b3b9c5;
+}
+.content-categories a {
+    text-decoration: none;
+    color: var(--light);
+    background-color: var(--dark-opacity);
+    border: .5px solid var(--border-color);
+    font-size: 12px;
+    padding: 3px 7px;
+}
+.content-categories a:first-child {
+    margin-left: 0;
+}
+.content-categories a:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+.post-meta-info a::after {
+    content: '';
+    width: 2px;
+    height: 13px;
+    position: absolute;
+    background: var(--border-color);
+    top: 30%;
+    right: -10px;
+}
+.post-meta-info a:last-child::after {
+    content: '';
+    display: none;
+}
+.post-card {
+    background: var(--dark-opacity);
+}
+.card.post-card img {
+    filter: none;
+}
+.post-card p {
+    font-size: 16px;
+}
+.post-card .post-content {
+    padding: 1rem;
+}
+.post-card .post-title {
+    color: rgb(238, 238, 238);
+}
+.articles > div:last-child {
+    display: none;
+}
+.technology__icon svg {
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+}
+
+/**
+ *  Footer
+**/
+.toolbar {
+    background-color: var(--toolbar-bg);
+}
