@@ -219,6 +219,7 @@ body {
     border: .5px solid var(--border-color);
     font-size: 12px;
     padding: 3px 7px;
+    margin-left: 5px;
 }
 .content-categories a:first-child {
     margin-left: 0;
