@@ -6,25 +6,7 @@
 
     <main class="main-content-wrapper">
         <div class="d-flex flex-column justify-content-between min-vh-100">
-            <div class="toolbar h-35 d-flex justify-content-between sticky-top">
-                <div class="d-flex">
-                    <button id="side-panel-toggle" class="topbar-line-icon px-3 border-0 text-light align-self-center">
-                        <span id="open">
-                            <i class="ri-menu-line"></i>
-                        </span>
-                        <span id="close" style="display: none;">
-                            <i class="ri-close-line"></i>
-                        </span>
-                    </button>
-                    
-                    <div class="topbar-title-tab overflow-hidden ps-3 pe-1 border-top border-2 border-primary">
-                        <a href="index.html" class="brand text-decoration-none text-light mb-0 text-sm">
-                            Dive Into Web World
-                        </a>
-                    </div>
-                </div>
-            </div>
-
+            <?php get_template_part('template-parts/toolbar'); ?>
             <div>
                 <div class="hero px-2 px-md-5 pt-5 pt-md-0">
                     <div class="row align-items-center hero-wrapper">
