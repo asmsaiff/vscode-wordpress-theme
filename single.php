@@ -36,10 +36,10 @@
                                 <span class="text-xsm align-self-center"><?php echo get_the_category()[0]->cat_name; ?></span>
                             </a>
                         </div>
-    
+
                         <?php
                             if(has_post_thumbnail()) {
-                                the_post_thumbnail('large', array('class'=>'img-fluid rounded-3 mt-4 mb-5'));
+                                the_post_thumbnail('large', array('class'=>'img-fluid w-100 rounded-3 mt-4 mb-5'));
                             }
                         ?>
                     </div>
