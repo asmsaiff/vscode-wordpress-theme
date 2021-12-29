@@ -2,6 +2,9 @@
     require_once(get_theme_file_path( '/lib/codestar-framework/codestar-framework.php' ));
     require_once(get_theme_file_path( '/inc/codestar-config.php' ));
 
+    // ACF
+    require_once(get_theme_file_path( '/inc/custom-fields/post-grid-featured-image.php' ));
+
     function diww_theme_setup() {
         load_theme_textdomain('diww');
         add_theme_support('custom-logo');
