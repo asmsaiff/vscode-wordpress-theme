@@ -3,7 +3,6 @@
     require_once(get_theme_file_path( '/inc/codestar-config.php' ));
 
     // ACF
-    require_once(get_theme_file_path( '/inc/custom-fields/post-grid-featured-image.php' ));
 
     function diww_theme_setup() {
         load_theme_textdomain('diww');
@@ -32,3 +31,9 @@
 
     remove_filter ('the_content', 'wpautop');
     remove_filter ('the_content', 'wpautop');
+
+    // Excerpt wrap by char limit
+    function excerpt_char_limit($e){
+		return substr($e,0,200);
+	}
+	add_filter('get_the_excerpt','excerpt_char_limit');
