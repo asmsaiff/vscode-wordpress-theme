@@ -19,3 +19,13 @@
         wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
     }
     add_action('wp_enqueue_scripts', 'diww_assets_enqueue');
+
+    if ( ! function_exists( 'diww_get_option' ) ) {
+        function diww_get_option( $option = '', $default = null ) {
+          $options = get_option( 'diww' ); // Attention: Set your unique id of the framework
+          return ( isset( $options[$option] ) ) ? $options[$option] : $default;
+        }
+    }
+
+    remove_filter ('the_content', 'wpautop');
+    remove_filter ('the_content', 'wpautop');
