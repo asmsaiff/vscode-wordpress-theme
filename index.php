@@ -8,109 +8,43 @@
         <div class="d-flex flex-column justify-content-between min-vh-100">
             <?php get_template_part('template-parts/toolbar'); ?>
             <div>
-                <?php get_template_part('template-parts/home-hero'); ?>
                 <div class="content-area pt-4 pb-5 mx-auto flex-grow-1">
-                    <?php 
-                        get_template_part('template-parts/technology-icons');
-                        // get_template_part('template-parts/home-meta');
+                    <?php
+                        if(have_posts()) :
                     ?>
-                    
-    
                     <div class="mt-5">
-                        <h2 class="section-title">Recent Post -</h2>
                         <div class="row articles">
+                            <?php
+                                while(have_posts()) :
+                                    the_post();
+                            ?>
                             <div class="col-6 col-xxl-4 mt-4">
-                                <a href="single.html" class="text-decoration-none">
+                                <a href="<?php the_permalink(); ?>" class="text-decoration-none">
                                     <div class="card border-0 post-card">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnail.png" class="img-fluid" alt="">
+                                        <?php
+                                            if(has_post_thumbnail()) {
+                                                the_post_thumbnail('large', array('class'=>'img-fluid'));
+                                            }
+                                        ?>
     
                                         <div class="post-content">
-                                            <h5 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
+                                            <h5 class="post-title">
+                                                <?php the_title(); ?>
+                                            </h5>
     
                                             <p class="mb-0 text-xsm lh-sm">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, fugiat quia! Perferendis neque quod eveniet, quisquam ipsum voluptate itaque.
+                                                <?php
+                                                    echo get_the_excerpt();
+                                                ?>
                                             </p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
-                            <div class="col-6 col-xxl-4 mt-4">
-                                <a href="single.html" class="text-decoration-none">
-                                    <div class="card border-0 post-card">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnail.png" class="img-fluid" alt="">
-    
-                                        <div class="post-content">
-                                            <h5 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
-    
-                                            <p class="mb-0 text-xsm lh-sm">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, fugiat quia! Perferendis neque quod eveniet, quisquam ipsum voluptate itaque.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-xxl-4 mt-4">
-                                <a href="single.html" class="text-decoration-none">
-                                    <div class="card border-0 post-card">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnail.png" class="img-fluid" alt="">
-    
-                                        <div class="post-content">
-                                            <h5 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
-    
-                                            <p class="mb-0 text-xsm lh-sm">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, fugiat quia! Perferendis neque quod eveniet, quisquam ipsum voluptate itaque.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-xxl-4 mt-4">
-                                <a href="single.html" class="text-decoration-none">
-                                    <div class="card border-0 post-card">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnail.png" class="img-fluid" alt="">
-    
-                                        <div class="post-content">
-                                            <h5 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
-    
-                                            <p class="mb-0 text-xsm lh-sm">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, fugiat quia! Perferendis neque quod eveniet, quisquam ipsum voluptate itaque.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-xxl-4 mt-4">
-                                <a href="single.html" class="text-decoration-none">
-                                    <div class="card border-0 post-card">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnail.png" class="img-fluid" alt="">
-    
-                                        <div class="post-content">
-                                            <h5 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
-    
-                                            <p class="mb-0 text-xsm lh-sm">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, fugiat quia! Perferendis neque quod eveniet, quisquam ipsum voluptate itaque.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="col-6 col-xxl-4 mt-4">
-                                <a href="single.html" class="text-decoration-none">
-                                    <div class="card border-0 post-card">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/thumbnail.png" class="img-fluid" alt="">
-    
-                                        <div class="post-content">
-                                            <h5 class="post-title">Lorem ipsum dolor sit amet consectetur adipisicing</h5>
-    
-                                            <p class="mb-0 text-xsm lh-sm">
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, fugiat quia! Perferendis neque quod eveniet, quisquam ipsum voluptate itaque.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
+                            <?php endwhile; wp_reset_postdata(); ?>
                         </div>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
 
