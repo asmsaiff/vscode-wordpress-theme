@@ -3,6 +3,7 @@
         'meta_key'              => 'is_featured',
         'meta_value'            => '1',
         'posts_per_page'        =>  6,
+        'order'                 =>  'ASC'
     ));
     
     if($diww_posts->have_posts()) :

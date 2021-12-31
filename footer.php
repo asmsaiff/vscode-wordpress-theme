@@ -1,6 +1,6 @@
             <footer class="toolbar py-2">
                 <p class="mb-0 text-center text-xsm">
-                    @ DiveIntoWebWorld | All Right Reserved | 2021
+                    <?php echo diww_get_option('footer_credit'); ?>
                 </p>
             </footer>
         </div>
