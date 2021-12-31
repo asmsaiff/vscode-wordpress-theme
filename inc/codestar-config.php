@@ -3,8 +3,9 @@
         $prefix = 'diww';
       
         CSF::createOptions( $prefix, array(
-            'menu_title'    => 'DIWW Options',
-            'menu_slug'     => 'diww_options',
+            'menu_title'    =>  'DIWW Options',
+            'menu_slug'     =>  'diww_options',
+            'menu_icon'     =>  'dashicons-screenoptions'
         ));
       
         CSF::createSection( $prefix, array(
