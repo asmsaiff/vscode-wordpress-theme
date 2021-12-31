@@ -19,6 +19,7 @@
             ),
         ));
       
+        include_once get_template_directory().'/inc/options/side-panel.php';
         include_once get_template_directory().'/inc/options/home-hero.php';
         include_once get_template_directory().'/inc/options/footer-options.php';
     }
