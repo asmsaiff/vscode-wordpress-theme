@@ -16,7 +16,13 @@
                     ?>
                     
                     <!-- Recent Post -->
-                    <?php get_template_part('template-parts/recent-post'); ?>
+                    <?php get_template_part('template-parts/post-sections/featured-post'); ?>
+
+                    <!-- JavaScript -->
+                    <?php get_template_part('template-parts/post-sections/post-js'); ?>
+
+                    <!-- WordPress -->
+                    <?php get_template_part('template-parts/post-sections/post-wp'); ?>
                 </div>
             </div>
 
