@@ -126,7 +126,4 @@
     main {
         padding: 0 0 0 80px;
     }
-    .articles > div:last-child {
-        display: block;
-    }
 }
