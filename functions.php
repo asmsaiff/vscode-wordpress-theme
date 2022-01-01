@@ -6,6 +6,7 @@
 
     function diww_theme_setup() {
         load_theme_textdomain('diww');
+        add_theme_support('title-tag');
         add_theme_support('custom-logo');
         add_theme_support('custom-header');
         add_theme_support('menus');
@@ -16,8 +17,10 @@
     function diww_assets_enqueue() {
         wp_enqueue_style('style-stylesheet', get_template_directory_uri().'/assets/css/style.css');
         wp_enqueue_style('responsive-stylesheet', get_template_directory_uri().'/assets/css/responsive.css');
+		wp_enqueue_style('highlightjs-stylesheet', 'https://cdn.jsdelivr.net/npm/highlightjs-themes@1.0.0/solarized_dark.css');
         wp_enqueue_style('main-stylesheet', get_stylesheet_uri());
 
+		wp_enqueue_script('highlight-js', '//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js', array('jquery'), time(), true);
         wp_enqueue_script('main-js', get_template_directory_uri().'/assets/js/main.js', array('jquery'), time(), true);
     }
     add_action('wp_enqueue_scripts', 'diww_assets_enqueue');

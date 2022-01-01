@@ -33,3 +33,5 @@ sidebar_category_menu_item.forEach(val => {
         svg_icon.classList.toggle('rotate_toggle_icons')
     })
 })
+
+hljs.highlightAll();

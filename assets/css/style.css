@@ -107,7 +107,7 @@ body {
  *  Header Section
 **/
 .main-header {
-    width: 45px;
+    width: 48px;
     height: 100vh;
     z-index: 1;
 }
@@ -118,7 +118,7 @@ body {
     background-color: var(--dark-opacity);
 }
 .category-sidebar {
-    width: 268px;
+    width: 330px;
     padding-left: 45px;
     height: 100vh;
 }
@@ -179,7 +179,7 @@ body {
     height: 100%;
 }
 .topbar-title-tab {
-    width: 220px;
+    width: 282px;
     background-color: var(--bg-primary);
     text-overflow: ellipsis;
 }
@@ -211,6 +211,10 @@ body {
     font-size: 17px;
     font-weight: 200;
     color: #b3b9c5;
+}
+.content-area h3 {
+	font-weight: 700;
+	margin: 20px 0 10px 0;
 }
 .content-categories a {
     text-decoration: none;
@@ -271,23 +275,28 @@ body {
 .codeblock {
 	background: 0% 0%/auto repeat #abb8c3;
 	max-width: 100%;
-	max-height: 27.5%;
 	white-space: pre-wrap;
     margin: 30px 0;
 }
 
 .codeDiv {
-    box-shadow: rgb(0 0 0 / 55%) 0px 20px 68px;
-    margin: 30px;
+	box-shadow: rgb(0 0 0 / 55%) 0px 20px 68px;
+	margin: 30px 30px 10px 30px;
 	padding: 0 30px;
-    background-color: #151718;
-    color: #fff;
-    border-radius: 5px;
+	background-color: #151718;
+	color: #fff;
+	border-radius: 5px;
 	font-size: 12px;
 }
 
 .codeDiv p {
     overflow-x: auto;
+}
+pre code.hljs {
+	display: block;
+	overflow-x: auto;
+	padding: 0;
+	background: transparent;
 }
 
 /**
