@@ -260,9 +260,6 @@ body {
 .post-card .post-title {
     color: rgb(238, 238, 238);
 }
-.articles > div:last-child {
-    display: none;
-}
 .technology__icon svg {
     width: 3.5rem;
     height: 3.5rem;
