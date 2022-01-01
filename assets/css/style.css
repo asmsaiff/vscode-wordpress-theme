@@ -97,7 +97,7 @@ body {
     background: var(--text-semi-light); 
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--border-color); 
+    background: var(--cat-bg-hover); 
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #555; 
