@@ -6,6 +6,7 @@
 
     function diww_theme_setup() {
         load_theme_textdomain('diww');
+        add_theme_support('title-tag');
         add_theme_support('custom-logo');
         add_theme_support('custom-header');
         add_theme_support('menus');
